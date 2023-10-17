@@ -154,15 +154,16 @@ val paragraph : string -> 'tag t
     [paragraph]. *)
 val paragraphf : ('tag t, unit, string, 'b t) format4 -> 'tag t
 
-(** [enumerate l ~f] produces an enumeration of the form:
+(** [enumerate ?bullet l ~f] produces an enumeration of the form:
 
     {v
       - item1
       - item2
       - item3
       ...
-    v} *)
-val enumerate : 'a list -> f:('a -> 'tag t) -> 'tag t
+    v}
+    where each line begins with [?bullet] which defaults to [verbatim "-"]. *)
+val enumerate : ?bullet:'tag t -> 'a list -> f:('a -> 'tag t) -> 'tag t
 
 (** [chain l ~f] is used to print a succession of items that follow each other.
     It produces an output of this form:

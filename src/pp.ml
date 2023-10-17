@@ -149,10 +149,10 @@ let tag tag t = Tag (tag, t)
 let paragraph s = hovbox (text s)
 let paragraphf fmt = hovbox (textf fmt)
 
-let enumerate l ~f =
+let enumerate ?(bullet = verbatim "-") l ~f =
   vbox
     (concat ~sep:cut
-       (List.map l ~f:(fun x -> box ~indent:2 (seq (verbatim "- ") (f x)))))
+       (List.map l ~f:(fun x -> box ~indent:2 (seq (seq bullet space) (f x)))))
 
 let chain l ~f =
   vbox
