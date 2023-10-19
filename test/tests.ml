@@ -140,7 +140,8 @@ let%expect_test _ =
     {|
 - - abc
   - def
-- - x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
+-
+  - x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
     x x x x x x x x x x x x x
   - y y y y y y y y y y y y y y y y y y y y y y y y y y y y y y y y y y y y y
     y y y y y y y y y y y y y
