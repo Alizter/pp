@@ -1,0 +1,6 @@
+(library
+ (name pp_table_tests)
+ (libraries pp table)
+ (inline_tests)
+ (preprocess
+  (pps ppx_expect)))

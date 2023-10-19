@@ -34,3 +34,11 @@ one [2] should be applicable to Pp as well.
 [1]: https://caml.inria.fr/pub/docs/manual-ocaml/libref/Format.html
 [2]: http://caml.inria.fr/resources/doc/guides/format.en.html
 "))
+
+(package
+ (name pp-table)
+ (depends
+   (ocaml (>= 4.08.0))
+   (ppx_expect :with-test))
+ (synopsis "Pretty-printing library for tables")
+ (description "TODO"))
